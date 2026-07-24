@@ -4,6 +4,31 @@ This ROS 2 project allows you to control the `turtlesim` turtle using a physical
 
 ## System Architecture
 
+## System Architecture
+
+```text
+┌──────────┐
+│ Joystick │
+└────┬─────┘
+     │ Analog Signals
+     ▼
+┌──────────┐
+│ Arduino  │
+└────┬─────┘
+     │ Serial Communication
+     ▼
+┌──────────────────────────┐
+│ joystick_serial_to_turtle│
+└─────────────┬────────────┘
+              │
+              │ /turtle1/cmd_vel
+              ▼
+      ┌─────────────────┐
+      │    turtlesim    │
+      └─────────────────┘
+```
+
+
 The data flows as follows:
 
 1.  **Joystick**: The physical X and Y axes are connected to an Arduino's analog pins.
