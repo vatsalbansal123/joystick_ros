@@ -4,7 +4,6 @@ This ROS 2 project allows you to control the `turtlesim` turtle using a physical
 
 ## System Architecture
 
-## System Architecture
 
 ```text
 ┌──────────┐
